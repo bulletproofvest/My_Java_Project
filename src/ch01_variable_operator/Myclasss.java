@@ -1,6 +1,7 @@
 package ch01_variable_operator;
 import java.util.*;
 
+
 //String food, String color, String music, String movie, String book, String firstLove
 
 public class Myclasss {
@@ -35,11 +36,12 @@ public class Myclasss {
         }
 
 
-        Collections.shuffle(queList);
+        Collections.shuffle(queList); //리스트를 무작위로 섞음
+
+        System.out.println(Youname+"에 대해 맞춰보세요.");
 
         for(int i=0; i<quenum; i++){
 
-            System.out.println("상대방에 대해 맞춰보세요.");
             System.out.println(Youname + "의" + queList.get(i) + "은?");
             String input = sc.nextLine();
 
@@ -52,6 +54,33 @@ public class Myclasss {
                 System.out.println("틀렸습니다.");
                 i--;
             }
+        }
+
+        Collections.shuffle(queList);
+
+        System.out.println(Myname+"에 대해 맞춰보세요.");
+
+        for(int i=0; i<quenum; i++){
+
+            System.out.println(Myname + "의" + queList.get(i) + "은?");
+            String input = sc.nextLine();
+
+            String output = MyList.get(i);
+
+            if(input == null){
+                MyList.remove(i);
+
+            }
+            if(input.equals(output)){
+                System.out.println("맞췄습니다.");
+            }
+
+            else {
+                System.out.println("틀렸습니다.");
+                i--;
+            }
+
+            System.out.println("게임 종료");
         }
 
 
