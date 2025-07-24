@@ -47,6 +47,10 @@ public class Myclasss {
 
             String output = YouList.get(i);
 
+            if(input == null){
+                YouList.remove(i);
+
+            }
             if(input.equals(output)){
                 System.out.println("맞췄습니다.");
             }
