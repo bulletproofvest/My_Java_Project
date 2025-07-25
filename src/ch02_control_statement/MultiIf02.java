@@ -7,7 +7,7 @@ public class MultiIf02 {
         int age;
         double ticket = 1000.0;
         double discount; //할인율
-        int sum;
+        int res;
         // String comment; > 노인, 유아, 어린이 등
 
         System.out.print("나이를 입력하세요: ");
@@ -36,9 +36,9 @@ public class MultiIf02 {
             System.out.println(age + "살 : 성인(정가)");
         }
 
-        sum = (int)ticket - (int)(ticket*(discount/100));
+        res = (int)ticket - (int)(ticket*(discount/100));
 
-        System.out.println("가격은 " + sum + "원입니다.");
+        System.out.println("가격은 " + res + "원입니다.");
 
         //String message = age + "살 : "+ comment;
         //System.out.println(comment);
