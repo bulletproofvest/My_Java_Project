@@ -44,5 +44,6 @@ public class TernaryOperator {
         System.out.println(score +"점이므로 " + d + "입니다.");
 
 
+
     }
 }
