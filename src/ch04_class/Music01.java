@@ -12,12 +12,15 @@ public class Music01 {
     int count;
 
     public Music01(String title, String artist, String composer, String lyrics, String lang){
+        System.out.println(title);
+        // this.title = (title == null) ? "알 수 없음" : title; -> if -else
         this.title = title;
-        this.artist = artist;
-        this.composer = composer;
-        this.lyrics = lyrics;
-        this.lang= lang;
+        this.artist = (artist == null) ? "알 수 없음" : artist;
+        this.composer = (composer == null) ? "알 수 없음" : composer;
+        this.lyrics = (lyrics == null) ? "알 수 없음" : lyrics;
+        this.lang = (lang == null) ? "알 수 없음" : lang;
     }
+
 
     void display(){
         System.out.println("곡명 : " + title);

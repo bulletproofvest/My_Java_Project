@@ -16,21 +16,34 @@ public class MusicMain01 {
 
     public static void musicAdd(){
         Scanner sc = new Scanner(System.in);
-        System.out.print("곡명 : ");
-        String title = sc.nextLine();
-        System.out.print("아티스트 : ");
-        String artist = sc.nextLine();
-        System.out.print("작곡가 : ");
-        String composer = sc.nextLine();
-        System.out.print("작사가 : ");
-        String lyrics = sc.nextLine();
-        System.out.print("언어(ko, en, jp) : ");
-        String lang = sc.nextLine();
 
-        Music01 music = new Music01(title, artist, composer, lyrics, lang);
+        String[] name = {"아티스트", "작곡가", "작사가", "언어(ko,en,jp)"};
+        String[] input = new String[4];
+        String musicname = "";
+
+        while (true){
+            System.out.print("곡명 : ");
+            musicname = sc.nextLine();
+            if (musicname.trim().isEmpty()) {
+                System.out.println("곡명을 다시 입력해주세요.");
+                System.out.println();
+            }else {
+                break;
+            }
+        }
+
+        for (int i = 0; i < name.length; i++) {
+            System.out.print(name[i] + " : ");
+            input[i] = sc.nextLine();
+            if(input[i].trim().isEmpty()){
+                input[i] = null;
+            }
+        }
+
+        Music01 music = new Music01(musicname, input[0], input[1], input[2], input[3]);
         musicList.add(music);
 
-        System.out.println("곡이 저장되었습니다.");
+        System.out.println("리스트에 저장되었습니다.");
         System.out.println();
 
     }
