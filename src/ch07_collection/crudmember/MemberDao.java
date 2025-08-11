@@ -17,6 +17,19 @@ public class MemberDao {
         return 1;
     }
 
+    //수정
+    public int updateData(Member updatdeMember){
+        int cnt = -1;
+
+        for(Member bean : memberList){
+            if(bean.getId().equals(updatdeMember.getId())){
+
+            }
+        }
+
+        return cnt;
+    }
+
     public int getSize(){
         return memberList.size();
     }
@@ -62,4 +75,6 @@ public class MemberDao {
     public void deleteAllData(){
         this.memberList.clear();
     }
+
+
 }
